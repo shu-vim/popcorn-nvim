@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  default:
+    deps: [style]
+    desc: --list-all を実行する。
+    cmds:
+      - task --list-all
+  style:
+      cmds:
+        - stylua .
