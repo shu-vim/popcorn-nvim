@@ -389,6 +389,7 @@ M.execute = function()
     vim.api.nvim_win_set_config(win, config)
 
     vim.cmd('normal 1gg')
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-L>', true, true, true), 'n', true)
   end
 
   build_item_lines = function(parent, origwin)
